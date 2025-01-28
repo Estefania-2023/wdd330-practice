@@ -42,8 +42,8 @@ export default class ProductListing {
 
 
     renderList(list) {
-        if (list.length > 4) {
-            list.length = 4
+        if (list.length > 10) {
+            list.length = 10
             renderListWithTemplate(productCardTemplate, this.listElement, list);
         }
     }
