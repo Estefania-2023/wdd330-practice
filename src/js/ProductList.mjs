@@ -83,6 +83,9 @@ export default class ProductListing {
   }
 
   renderList(list) {
+    // Sort the list by FinalPrice in ascending order
+    list.sort((a, b) => a.FinalPrice - b.FinalPrice);
+    
     if (list.length > 4) {
       list.length = 4;
       renderListWithTemplate(productCardTemplate, this.listElement, list);
